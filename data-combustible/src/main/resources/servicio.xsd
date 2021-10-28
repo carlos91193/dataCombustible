@@ -1,0 +1,37 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://spring.io/guides/gs-producing-web-service"
+           targetNamespace="http://spring.io/guides/gs-producing-web-service" elementFormDefault="qualified">
+
+    <xs:element name="getDespachoRequest">
+        <xs:complexType>
+            <xs:sequence>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getDespachoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="despachoInfo" type="tns:despachoInfo" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="despachoInfo">
+        <xs:sequence>
+            <xs:element name="sistema" type="xs:string"/>
+            <xs:element name="idTransacion" type="xs:string"/>
+            <xs:element name="sociedad" type="xs:string"/>
+            <xs:element name="fechaContabilizacion" type="xs:string"/>
+            <xs:element name="horaContabilizacion" type="xs:string"/>
+            <xs:element name="estacionServicio" type="xs:string"/>
+            <xs:element name="equipo" type="xs:string"/>
+            <xs:element name="valorCombustible" type="xs:string"/>
+            <xs:element name="valorHorometro" type="xs:string"/>
+            <xs:element name="valorOdometro" type="xs:string"/>
+            <xs:element name="texto" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+</xs:schema>
